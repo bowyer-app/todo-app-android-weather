@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <ImageView
+        android:id="@+id/location_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_vector_location"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/icon_tint" />
+
+    <ImageView
+        android:id="@+id/weather_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/location_icon"
+        app:tint="@color/icon_tint" />
+
+    <LinearLayout
+        android:id="@+id/weather_summary"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/weather_icon"
+        app:layout_constraintStart_toEndOf="@id/weather_icon"
+        app:layout_constraintTop_toTopOf="@id/weather_icon">
+
+        <TextView
+            android:id="@+id/now_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_2"
+            android:textSize="12sp"
+            tools:text="現在気温26℃" />
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textColor="@color/text_1"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="曇りがち" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="end"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@id/weather_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/weather_summary"
+        app:layout_constraintTop_toTopOf="@id/weather_icon">
+
+        <TextView
+            android:id="@+id/max_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_max_temp"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_vector_up"
+            app:drawableTint="@color/text_max_temp"
+            tools:text="26℃" />
+
+        <TextView
+            android:id="@+id/min_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/text_min_temp"
+            android:textSize="12sp"
+            app:drawableStartCompat="@drawable/ic_vector_down"
+            app:drawableTint="@color/text_min_temp"
+            tools:text="10℃" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/location_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:textColor="@color/text_1"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/location_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/location_icon"
+        app:layout_constraintTop_toTopOf="@id/location_icon"
+        tools:text="渋谷区" />
+</androidx.constraintlayout.widget.ConstraintLayout>

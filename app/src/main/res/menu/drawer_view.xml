@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@id/destination_add"
+            android:icon="@drawable/ic_vector_add"
+            android:title="@string/drawer_input" />
+        <item
+            android:id="@id/destination_list"
+            android:icon="@drawable/ic_vector_list"
+            android:title="@string/drawer_list" />
+    </group>
+    <item android:title="@string/drawer_other">
+        <menu>
+            <item
+                android:id="@id/destination_setting"
+                android:icon="@drawable/ic_vector_setting"
+                android:title="@string/drawer_setting" />
+            <item
+                android:id="@id/destination_review"
+                android:icon="@drawable/ic_vector_edit"
+                android:title="@string/drawer_review" />
+            <item
+                android:id="@id/destination_share"
+                android:icon="@drawable/ic_vector_share"
+                android:title="@string/drawer_share" />
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">todo-app-android</string>
+    <!-- 共通 -->
+    <string name="ok">OK</string>
+    <string name="cancel">キャンセル</string>
+    <string name="save">保存</string>
+    <string name="delete">削除</string>
+    <string name="dialog_title_error">エラー</string>
+
+    <!-- Drawer -->
+    <string name="drawer_input">追加</string>
+    <string name="drawer_list">追加</string>
+    <string name="drawer_other">その他</string>
+    <string name="drawer_share">友達に教える</string>
+    <string name="drawer_review">レビューを書く</string>
+    <string name="drawer_setting">設定</string>
+
+    <!-- 設定 -->
+    <string name="title_app_setting">設定</string>
+    <string name="api_setting">API設定</string>
+    <string name="other_setting">その他</string>
+    <string name="open_weather_app_id">Open Weather AppId</string>
+    <string name="open_weather_app_id_hint">Open WeatherのAppIdを入力</string>
+    <string name="zip_code">郵便番号</string>
+    <string name="zip_code_hint">150\-0002</string>
+    <string name="zip_code_error_title">郵便番号が不正です</string>
+    <string name="zip_code_error_message">郵便番号は150\-0002の形式で入力してください。</string>
+    <string name="need_setting">設定が必要です</string>
+    <string name="setting_error_dialog_title_need_value">入力が必要です</string>
+    <string name="setting_error_dialog_message_need_api">Open Weather AppIdは必須です</string>
+    <string name="setting_error_dialog_message_need_zip_code">郵便番号は必須です</string>
+
+    <!-- TODO編集 -->
+    <string name="title_todo_insert">追加</string>
+    <string name="title_todo_edit">編集</string>
+    <string name="title_todo_title_hint">タイトルを入力</string>
+    <string name="title_todo_description_hint">詳細を入力</string>
+    <string name="message_need_title_and_description">タイトルと詳細は必須です</string>
+    <string name="message_failed_to_save">保存に失敗しました</string>
+    <string name="message_failed_to_delete">保存に失敗しました</string>
+    <string name="message_delete_success">削除しました</string>
+
+    <!-- 天気 -->
+    <string name="weekly_weather">週間天気</string>
+    <string name="now_temperature">現在気温 %.1f℃</string>
+    <string name="temperature">%.1f℃</string>
+
+    <!--  ライセンス  -->
+    <string name="title_license">ライセンス</string>
+
+</resources>

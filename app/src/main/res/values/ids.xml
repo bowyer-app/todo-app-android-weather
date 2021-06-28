@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="main" type="id" />
+    <item name="destination_list" type="id" />
+    <item name="destination_edit" type="id" />
+    <item name="destination_insert" type="id" />
+    <item name="destination_add" type="id" />
+    <item name="destination_setting" type="id" />
+    <item name="destination_review" type="id" />
+    <item name="destination_share" type="id" />
+    <item name="destination_weekly_weather" type="id" />
+    <item name="destination_license" type="id" />
+
+    <item name="action_edit_todo" type="id" />
+    <item name="action_insert_todo" type="id" />
+    <item name="action_present_weekly_weather" type="id" />
+    <item name="action_present_license" type="id" />
+</resources>

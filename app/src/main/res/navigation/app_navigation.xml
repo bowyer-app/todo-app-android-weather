@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/destination_list">
+
+    <dialog
+        android:id="@id/destination_weekly_weather"
+        android:name="com.bowyer.app.todoapp.ui.todolist.weather.WeeklyWeatherBottomSheetDialog"
+        android:label="">
+        <argument
+            android:name="weeklyWeatherItemModel"
+            app:argType="com.bowyer.app.todoapp.ui.todolist.weather.ToDoListWeeklyWeatherItemModel"
+            app:nullable="false" />
+    </dialog>
+
+    <fragment
+        android:id="@id/destination_edit"
+        android:name="com.bowyer.app.todoapp.ui.todoedit.ToDoEditFragment"
+        android:label="@string/title_todo_edit">
+        <argument
+            android:name="todo"
+            android:defaultValue="@null"
+            app:argType="com.bowyer.app.todoapp.domain.ToDoContent"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@id/destination_list"
+        android:name="com.bowyer.app.todoapp.ui.todolist.ToDoListFragment"
+        android:label=""
+        tools:layout="@layout/fragment_todo_list">
+        <action
+            android:id="@id/action_edit_todo"
+            app:destination="@id/destination_edit"
+            app:popUpTo="@id/destination_list"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@id/action_insert_todo"
+            app:destination="@id/destination_insert"
+            app:popUpTo="@id/destination_list"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@id/action_present_weekly_weather"
+            app:destination="@id/destination_weekly_weather"
+            app:popUpTo="@id/destination_list"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <fragment
+        android:id="@id/destination_insert"
+        android:name="com.bowyer.app.todoapp.ui.todoedit.ToDoEditFragment"
+        android:label="@string/title_todo_insert">
+        <argument
+            android:name="todo"
+            android:defaultValue="@null"
+            app:argType="com.bowyer.app.todoapp.domain.ToDoContent"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@id/destination_setting"
+        android:name="com.bowyer.app.todoapp.ui.setting.SettingFragment"
+        android:label="@string/title_app_setting" >
+        <action
+            android:id="@id/action_present_license"
+            app:destination="@id/destination_license" />
+    </fragment>
+
+    <fragment
+        android:id="@id/destination_license"
+        android:name="com.bowyer.app.todoapp.ui.license.LicenseFragment"
+        android:label="@string/title_license" />
+</navigation>

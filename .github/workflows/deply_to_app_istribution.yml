@@ -1,0 +1,42 @@
+name: Deply to App Distribution
+
+on:
+  push:
+    branches:
+      - release/*
+      - hotfix/*
+      - "master"
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: set up JDK 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: Install NDK
+        run: echo "y" | sudo /usr/local/lib/android/sdk/tools/bin/sdkmanager --install "ndk;20.0.5594570" --sdk_root=${ANDROID_SDK_ROOT}
+      - name: Build with Gradle
+        env:
+          STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: ./gradlew assembleProductionRelease
+      - name: Upload apk file
+        uses: actions/upload-artifact@v2
+        with:
+          name: apk
+          path: app/build/outputs/apk/production/release/app-production-release.apk
+      ## Deploy Firebase App Distribution
+      - name: Deploy Firebase App Distribution
+        uses: wzieba/Firebase-Distribution-Github-Action@v1.2.2
+        with:
+          appId: ${{secrets.FIREBASE_DEV_APP_ID}}
+          token: ${{secrets.FIREBASE_TOKEN}}
+          groups: developer
+          file: app/build/outputs/apk/production/release/app-production-release.apk
+
