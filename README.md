@@ -35,3 +35,20 @@ https://openweathermap.org/api
  - Network:[Retrofit](https://github.com/square/retrofit)
  - JSON parse:[Moshi](https://github.com/square/moshi)
  - Log:[Timber](https://github.com/JakeWharton/timber)
+
+## テスト方法
+`release/*`,`hotfix/*`,`"master"`ブランチにpushされるとapkが生成され、Firebase App Distributionにて配布されます
+
+コード
+
+https://github.com/bowyer-app/todo-app-android-weather/blob/master/.github/workflows/deply_to_app_istribution.yml
+
+
+## リリース
+タグを切ると、リリースページにapkとaabがアップロードされます。
+
+https://github.com/bowyer-app/todo-app-android-weather/releases/tag/deploy-aab-and-apk
+
+コード
+
+https://github.com/bowyer-app/todo-app-android-weather/blob/master/.github/workflows/upload_apk_to_release_page.yml
