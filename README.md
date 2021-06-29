@@ -35,5 +35,3 @@ https://openweathermap.org/api
  - Network:[Retrofit](https://github.com/square/retrofit)
  - JSON parse:[Moshi](https://github.com/square/moshi)
  - Log:[Timber](https://github.com/JakeWharton/timber)
-
- - 
