@@ -3,6 +3,8 @@
     <color name="accent">#0BBC67</color>
     <color name="white">#ffffff</color>
     <color name="primary">#202020</color>
+    <color name="background_primary">#202020</color>
+    <color name="background_secondary">#393939</color>
 
     <color name="primary_variant">#484848</color>
     <color name="on_primary">#6d6d6d</color>
