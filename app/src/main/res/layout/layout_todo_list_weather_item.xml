@@ -16,8 +16,7 @@
         android:contentDescription="@null"
         android:src="@drawable/ic_vector_location"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:tint="@color/icon_tint" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/weather_icon"
@@ -29,8 +28,7 @@
         android:contentDescription="@null"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/location_icon"
-        app:tint="@color/icon_tint" />
+        app:layout_constraintTop_toBottomOf="@id/location_icon" />
 
     <LinearLayout
         android:id="@+id/weather_summary"
@@ -46,7 +44,7 @@
             android:id="@+id/now_temperature"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text_2"
+            android:textColor="@color/text_secondary"
             android:textSize="12sp"
             tools:text="現在気温26℃" />
 
@@ -55,7 +53,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="4dp"
-            android:textColor="@color/text_1"
+            android:textColor="@color/text_primary"
             android:textSize="14sp"
             android:textStyle="bold"
             tools:text="曇りがち" />
@@ -79,10 +77,10 @@
             android:layout_height="wrap_content"
             android:drawablePadding="4dp"
             android:gravity="center_vertical"
-            android:textColor="@color/text_max_temp"
+            android:textColor="@color/text_primary"
             android:textSize="12sp"
             app:drawableStartCompat="@drawable/ic_vector_up"
-            app:drawableTint="@color/text_max_temp"
+            app:drawableTint="@color/object_primary"
             tools:text="26℃" />
 
         <TextView
@@ -92,10 +90,10 @@
             android:layout_marginTop="4dp"
             android:drawablePadding="4dp"
             android:gravity="center_vertical"
-            android:textColor="@color/text_min_temp"
+            android:textColor="@color/text_primary"
             android:textSize="12sp"
             app:drawableStartCompat="@drawable/ic_vector_down"
-            app:drawableTint="@color/text_min_temp"
+            app:drawableTint="@color/object_secondary"
             tools:text="10℃" />
     </LinearLayout>
 
@@ -106,7 +104,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginEnd="16dp"
         android:ellipsize="end"
-        android:textColor="@color/text_1"
+        android:textColor="@color/text_primary"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/location_icon"
         app:layout_constraintEnd_toEndOf="parent"
