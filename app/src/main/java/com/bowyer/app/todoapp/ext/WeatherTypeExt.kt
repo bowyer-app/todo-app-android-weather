@@ -8,31 +8,31 @@ import com.bowyer.app.todoapp.domain.WeatherType
 fun WeatherType.toIconRes(): Int {
   return when (this) {
     WeatherType.CLEAR_SKY -> {
-      R.drawable.ic_vector_clear_sky
+      R.drawable.ic_clear_sky
     }
     WeatherType.FEW_CLOUDS -> {
-      R.drawable.ic_vector_few_clouds
+      R.drawable.ic_few_clouds
     }
     WeatherType.SCATTERED_CLOUDS -> {
-      R.drawable.ic_vector_scattered_clouds
+      R.drawable.ic_scattered_clouds
     }
     WeatherType.BROKEN_CLOUDS -> {
-      R.drawable.ic_vector_broken_clouds
+      R.drawable.ic_scattered_clouds
     }
     WeatherType.SHOWER_RAIN -> {
-      R.drawable.ic_vector_shower_rain
+      R.drawable.ic_shower_rain
     }
     WeatherType.RAIN -> {
-      R.drawable.ic_vector_rain
+      R.drawable.ic_rain
     }
     WeatherType.THUNDERSTORM -> {
-      R.drawable.ic_vector_thunderstorm
+      R.drawable.ic_thunderstorm
     }
     WeatherType.SNOW -> {
-      R.drawable.ic_vector_snow
+      R.drawable.ic_snow
     }
     WeatherType.MIST -> {
-      R.drawable.ic_vector_mist
+      R.drawable.ic_mist
     }
   }
 }

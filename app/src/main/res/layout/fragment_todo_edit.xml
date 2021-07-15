@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="16dp"
-    android:background="@color/background">
+    android:background="@color/background_primary">
 
     <EditText
         android:id="@+id/title"
@@ -13,7 +13,7 @@
         android:gravity="bottom"
         android:hint="@string/title_todo_title_hint"
         android:inputType="text"
-        android:textColor="@color/text_1"
+        android:textColor="@color/text_primary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -26,7 +26,7 @@
         android:gravity="top"
         android:hint="@string/title_todo_description_hint"
         android:inputType="text"
-        android:textColor="@color/text_1"
+        android:textColor="@color/text_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

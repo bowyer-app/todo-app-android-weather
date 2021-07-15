@@ -5,7 +5,7 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@color/background_primary"
     tools:openDrawer="start">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,6 +41,7 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:elevation="2dp"
+        android:background="@color/background_primary"
         app:insetForeground="@android:color/transparent"
         app:itemBackground="@android:color/transparent"
         app:itemIconPadding="34dp"

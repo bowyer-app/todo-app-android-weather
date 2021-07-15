@@ -7,7 +7,7 @@
     android:id="@+id/root_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@color/background"
+    android:background="@color/background_primary"
     android:foreground="?android:attr/selectableItemBackground"
     android:gravity="center_vertical">
 
@@ -27,7 +27,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:textColor="@color/text_2"
+        android:textColor="@color/text_secondary"
         app:layout_constraintStart_toEndOf="@+id/default_check"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="2019/01/03" />
@@ -42,7 +42,7 @@
         android:ellipsize="end"
         android:gravity="center_vertical"
         android:maxLines="1"
-        android:textColor="@color/text_1"
+        android:textColor="@color/text_primary"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/default_check"

@@ -5,11 +5,8 @@ import android.os.Bundle
 import android.util.DisplayMetrics
 import android.view.LayoutInflater
 import android.view.View
-import androidx.core.content.ContextCompat
 import androidx.fragment.app.DialogFragment
 import androidx.navigation.fragment.navArgs
-import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.bowyer.app.todoapp.R
 import com.bowyer.app.todoapp.databinding.DialogWeeklyWeatherBottomSheetBinding
 import com.bowyer.app.todoapp.ext.setSheetState
@@ -56,21 +53,7 @@ class WeeklyWeatherBottomSheetDialog : BottomSheetDialogFragment() {
   }
 
   private fun initRecycler() {
-    val dividerItemDecoration = DividerItemDecoration(
-      requireContext(),
-      LinearLayoutManager(requireContext()).orientation
-    ).apply {
-      ContextCompat.getDrawable(
-        requireContext(),
-        R.drawable.divider
-      )?.let {
-        setDrawable(
-          it
-        )
-      }
-    }
     binding.recycler.apply {
-      addItemDecoration(dividerItemDecoration)
       adapter = GroupAdapter<GroupieViewHolder>().apply {
         add(section)
       }
